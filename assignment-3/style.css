@@ -1,0 +1,48 @@
+table{
+    border: 1px black solid;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #ededed;
+    margin: 12% auto;
+}
+.input-cal{
+    width: 326px;
+    height: 38px;
+}
+h1{
+    text-align: center;
+}
+td{
+    width: 70px;
+    height: 30px;
+    text-align: center;
+}
+.firstrow,.globalone {
+    background-color: black;
+    color: white;
+
+
+}
+.global{
+    background-color: lightgrey;
+}
+#one{
+    background-color: #39cbdb;
+}
+.btn {
+    background: none;
+    border: 0;
+    color: white;
+    width: 80px;
+    height: 40px;
+}
+.btn-white{
+    border: 1px solid;
+    background: none;
+    color: #000;
+    font-weight: 300;
+    font-size: 15px;
+    width: 80px;
+    height: 40px;
+    border-radius: 3px;
+}
