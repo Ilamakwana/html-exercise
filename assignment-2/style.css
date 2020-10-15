@@ -1,0 +1,110 @@
+.header ,.footer,.heading{
+    width:100%;
+}
+body{
+    background-color: #f1f1f1;
+}
+
+* {
+    box-sizing: border-box;
+}
+.row {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+P{
+    margin-left: 90px;
+    color: #009900;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    flex: 33.33%;
+    padding-left: 75px;
+    height: 355px;
+}
+
+/*
+@media (min-width: 0px) and (max-width: 400px) {
+    .column {
+        width: 100% !important;
+        padding-left: 0px;
+    }
+}
+@media (min-width: 401px) and (max-width: 767px) {
+    .column {
+        width: 50% !important;
+        padding-left: 0px;
+    }
+}*/
+@media all and (min-width:960px) and (max-width: 1024px) {
+    .column {
+        width: 33% !important;
+        padding-left:35px;
+    }
+}
+
+@media all and (min-width:801px) and (max-width: 959px) {
+    .column {
+        width: 50% !important;
+        padding-left: 35px;
+    }
+}
+
+@media all and (min-width:769px) and (max-width: 800px) {
+    .column {
+        width: 50% !important;
+        padding-left: 35px;
+    }
+}
+
+@media all and (min-width:569px) and (max-width: 768px) {
+    .column {
+        width: 50% !important;
+        padding-left: 50px;
+    }
+}
+
+@media all and (min-width:481px) and (max-width: 568px) {
+    .column {
+        width: 50% !important;
+        padding-left: 0px;
+    }
+}
+
+@media all and (min-width:381px) and (max-width: 480px) {
+    .column {
+        width: 60% !important;
+        padding-left: 60px;
+    }
+}
+
+@media all and (min-width:361px) and (max-width: 380px) {
+    .column {
+        width: 60% !important;
+        padding-left: 42px;
+    }
+}
+
+@media all and (min-width:321px) and (max-width: 360px) {
+    .column {
+        width: 60% !important;
+        padding-left: 37px;
+    }
+}
+
+@media all and (min-width:285px) and (max-width: 320px) {
+    .column {
+        width: 100% !important;
+        padding-left: 20px;
+    }
+}
+@media all and (min-width:0px) and (max-width: 284px) {
+    .column {
+        width: 100% !important;
+        padding-left: 0px;
+    }
+}
