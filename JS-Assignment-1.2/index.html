@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="billing.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<form>
+    <fieldset>
+        <legend>Shipping Information</legend>
+        <label for="shippingName">Name:</label>
+        <input type="text" name="shipName" id="shippingName" required><br/>
+
+        <label for="shippingName">Phone:</label>
+        <input type="text" name="shipName" id="shippingPhone" required><br/>
+
+        <label for="shippingName">Address:</label>
+        <input type="text" name="shipName" id="shippingAddress" required><br/>
+
+        <label for="shippingName">City:</label>
+        <input type="text" name="shipName" id="shippingCity" required><br/>
+
+        <label for="shippingName">State:</label>
+        <input type="text" name="shipName" id="shippingState" required><br/>
+
+        <label for="shippingZip">Zip code:</label>
+        <input type="text" name="shipZip" id="shippingZip" pattern="[0-9]{5}" required><br/>
+    </fieldset>
+    <input type="checkbox" id="same" name="same" onclick="billingFunction()"/>
+    <label for="same">Is the Billing Information the Same?</label>
+
+    <fieldset>
+        <legend>Billing Information</legend>
+        <label for="billingName">Name:</label>
+        <input type="text" name="billName" id="billingName" required><br/>
+
+        <label for="shippingName">Phone:</label>
+        <input type="text" name="shipName" id="billingPhone" required><br/>
+
+        <label for="shippingName">Address:</label>
+        <input type="text" name="shipName" id="billingAddress" required><br/>
+
+        <label for="shippingName">City:</label>
+        <input type="text" name="shipName" id="billingCity" required><br/>
+
+        <label for="shippingName">State:</label>
+        <input type="text" name="shipName" id="billingState" required><br/>
+
+        <label for="billingZip">Zip code:</label>
+        <input type="text" name="billZip" id="billingZip" pattern="[0-9]{5}" required><br/>
+    </fieldset>
+    <input type="submit" value="Verify"/>
+</form>
+
+
