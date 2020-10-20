@@ -1,0 +1,166 @@
+<!DOCTYPE>
+<html>
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Sign-Up</title>
+    <link rel="icon" href="./images/b.png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
+          integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw=="
+          crossorigin="anonymous"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2">
+            <form role="form" method="POST" name="myForm">
+                <h2>Welcome to Step by Step
+                    <small>Sign up</small>
+                </h2>
+                <hr class="colorgraph">
+                <div id="formvalidation"></div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" onblur="cleartxt()" autofocus name="first" id="firstNameId"
+                                   class="form-control input-lg" placeholder="First Name" tabindex="1">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" onblur="cleartxt()" name="last" id="lastNameId"
+                                   class="form-control input-lg" placeholder="Last Name" tabindex="2">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" onblur="cleartxt()" name="user " id="userNameId" class="form-control input-lg"
+                           placeholder="User Name" tabindex="3">
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="email" onblur="cleartxt()" name="email" id="emailId"
+                                   class="form-control input-lg"
+                                   placeholder="Email Address" tabindex="4">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="email" onblur="cleartxt()" name="email_confirm" id="email_confirm"
+                                   class="form-control input-lg"
+                                   placeholder="Confirm Email Address" tabindex="5">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" onblur="cleartxt()" name="phone" id="phone" class="form-control input-lg"
+                           placeholder="Phone number" tabindex="6">
+                </div>
+                <div class="form-group">
+                    <input type="date" onblur="cleartxt()" name="date " id="dateId" class="form-control input-lg"
+                           placeholder="" tabindex="7">
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group password-icon">
+                            <input type="password" onblur="cleartxt()" name="pass" id="passwordId"
+                                   class="form-control input-lg" placeholder="Password" tabindex="">
+                            <i class="far fa-eye" id="togglePassword"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group password-icon">
+                            <input type="password" onblur="cleartxt()" name="password_confirmation"
+                                   id="password_confirmation" class="form-control input-lg"
+                                   placeholder="Confirm Password" tabindex="9" required>
+                            <i class="far fa-eye" id="toggleConfirmPassword"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-3">
+                        <span class="button-checkbox">
+                        <input title="checkbox" type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
+					</span>
+                    </div>
+                    <div class="col-xs-8 col-sm-9 col-md-9">
+                        By clicking <strong class="label label-primary">Register</strong>, you agree to the
+                        <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a>
+                    </div>
+                </div>
+
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <a onclick="register()" class="btn btn-primary btn-block btn-lg">Registration</a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="login.html" class="btn btn-success btn-block btn-lg">SignIn</a>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <a href="#" class="btn btn-primary btn-block btn-lg"
+                           id="reviewbutton" data-toggle="modal" data-target="#review"
+                           onclick="reviewdetails()">Review</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+                </div>
+                <div class="modal-body">
+                    <p> Welcome to Step by Step </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="review" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel1">Data Review</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="details"> Welcome to Step by Step</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+ 
+}
+#formvalidation{
+     height: 30px;
+    margin-bottom: 20px;
+    color: red;
+    font-weight: bold
+    
+}
+
+.password-icon i {
+    margin-top: -30px;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+    #toggleConfirmPassword{
+        display: none;
+    }
+    #togglePassword{
+        display: none;
+    }
+}
